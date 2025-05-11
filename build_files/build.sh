@@ -14,7 +14,7 @@ dnf5 config-manager addrepo -y --from-repofile=https://repo.secureblue.dev/secur
 
 # this installs a package from fedora repos
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf5 install -y akmod-wl trivalent
+dnf5 install -y akmod-wl trivalent android-tools
 
 # Use a COPR Example:
 #
