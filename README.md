@@ -10,6 +10,16 @@ Includes:
 - `kmod-wl`
 - `akmods-wl`
 
+## Rebasing to this custom image
+
+In your terminal, run this:
+
+```
+sudo bootc switch ghcr.io/trivoxel/bluefin-macbook:latest
+```
+
+Now, reboot.
+
 ## How to install?
 
 Please refer to [the Bluefin docs](https://docs.projectbluefin.io/introduction/) for complete installation instructions.
@@ -19,16 +29,6 @@ Please refer to [the Bluefin docs](https://docs.projectbluefin.io/introduction/)
 3. Insert USB into MacBook and hold <kbd>⌥/Option</kbd> (<kbd>Alt</kbd>) key while turning on
 4. Select the USB drive from the boot screen
 5. Install
-
-## Rebasing to this custom image
-
-In your terminal, run this:
-
-```
-sudo bootc switch ghcr.io/trivoxel/bluefin-macbook
-```
-
-Now, reboot.
 
 ## Troubleshooting
 
