@@ -15,13 +15,3 @@ dnf5 config-manager addrepo -y --from-repofile=https://repo.secureblue.dev/secur
 # this installs a package from fedora repos
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf5 install -y akmod-wl broadcom-wl kmod-wl
-# /usr/sbin/akmods --force
-cd /tmp/
-wget https://github.com/TriVoxel/bluefin-macbook/raw/refs/heads/main/akmodsbuild-rootpatch.sh
-chmod +x ./akmodsbuild-rootpatch.sh
-./akmodsbuild-rootpatch.sh /usr/src/akmods/wl-kmod.latest
-sudo rpm --force -i kmod-wl-$(uname -r)-*.rpm
-rpm -q kmod-wl-$(uname -r)
-rpm -V kmod-wl-$(uname -r)
-sudo depmod -a
-sudo modprobe wl
