@@ -18,4 +18,4 @@ tar -xvzf /tmp/akmods/"$AKMODS_TARGZ" -C /tmp/
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf5 versionlock delete kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 remove -y kernel* # mega oof
-dnf5 install -y /tmp/akmods-rpms/kmods/*wl*.rpm /tmp/akmods-kernel-rpms/kernel*.rpm
+dnf5 install -y /tmp/akmods/kmods/*wl*.rpm /tmp/akmods-kernel-rpms/kernel*.rpm
