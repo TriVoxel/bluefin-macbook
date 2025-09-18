@@ -17,7 +17,8 @@ dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 dnf5 install -y akmod-wl broadcom-wl kmod-wl
 # /usr/sbin/akmods --force
 cd /tmp/
-akmodsbuild --force /usr/src/akmods/wl-kmod.latest
+wget https://github.com/TriVoxel/bluefin-macbook/raw/refs/heads/main/akmodsbuild-rootpatch.sh
+./akmodsbuild-rootpatch.sh --force /usr/src/akmods/wl-kmod.latest
 sudo rpm --force -i kmod-wl-$(uname -r)-*.rpm
 rpm -q kmod-wl-$(uname -r)
 rpm -V kmod-wl-$(uname -r)
