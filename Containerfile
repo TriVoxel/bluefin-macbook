@@ -3,6 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
+FROM ghcr.io/ublue-os/akmods:${FEDORA_VERSION} AS akmods
 FROM ghcr.io/ublue-os/bluefin:stable-daily
 
 ## Other possible base images include:
@@ -18,7 +19,8 @@ FROM ghcr.io/ublue-os/bluefin:stable-daily
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+RUN --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms dnf install -y /tmp/akmods-rpms/*wl*.rpm\
+    --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
