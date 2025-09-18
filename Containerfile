@@ -4,7 +4,7 @@ COPY build_files /
 
 # Base Image
 FROM ghcr.io/ublue-os/akmods:main-$(rpm -E %fedora) AS akmods
-FROM ghcr.io/ublue-os/bluefin:stable-daily
+FROM ghcr.io/ublue-os/bluefin:stable
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
