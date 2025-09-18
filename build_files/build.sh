@@ -17,4 +17,3 @@ dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 dnf5 versionlock delete kernel kernel-devel kernel-devel-matched kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 remove -y kernel* # mega oof
 dnf5 install -y /tmp/akmods-rpms/kmods/*wl*.rpm /tmp/akmods-kernel-rpms/kernel*.rpm
-modprobe enable wl
