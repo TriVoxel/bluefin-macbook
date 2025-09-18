@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/akmods:${FEDORA_VERSION} AS akmods
+FROM ghcr.io/ublue-os/akmods:main AS akmods
 FROM ghcr.io/ublue-os/bluefin:stable-daily
 
 ## Other possible base images include:
