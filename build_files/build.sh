@@ -27,4 +27,3 @@ dnf5 install -y akmod-wl broadcom-wl
 
 systemctl enable podman.socket
 systemctl enable wl
-akmods
