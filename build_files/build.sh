@@ -18,7 +18,8 @@ dnf5 install -y akmod-wl broadcom-wl kmod-wl
 # /usr/sbin/akmods --force
 cd /tmp/
 wget https://github.com/TriVoxel/bluefin-macbook/raw/refs/heads/main/akmodsbuild-rootpatch.sh
-./akmodsbuild-rootpatch.sh --force /usr/src/akmods/wl-kmod.latest
+chmod +x ./akmodsbuild-rootpatch.sh
+./akmodsbuild-rootpatch.sh /usr/src/akmods/wl-kmod.latest
 sudo rpm --force -i kmod-wl-$(uname -r)-*.rpm
 rpm -q kmod-wl-$(uname -r)
 rpm -V kmod-wl-$(uname -r)
