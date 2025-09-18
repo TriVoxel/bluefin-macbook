@@ -22,11 +22,17 @@ Please refer to [the Bluefin docs](https://docs.projectbluefin.io/introduction/)
 
 ## Rebasing to this custom image
 
-To be continued. This is a first draft!!
+In your terminal, run this:
+
+```
+sudo bootc switch ghcr.io/trivoxel/bluefin-macbook
+```
+
+Now, reboot.
 
 ## Troubleshooting
 
-If WiFi is not working, run the following commands:
+If WiFi is not working, run the following commands in your terminal:
 
 ```
 sudo modprobe enable wl
