@@ -15,5 +15,5 @@ dnf5 config-manager addrepo -y --from-repofile=https://repo.secureblue.dev/secur
 # this installs a package from fedora repos
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 #dnf5 install -y akmod-wl broadcom-wl kmod-wl
-ls /tmp/akmods-rpms/
-dnf5 install -y /tmp/akmods-rpms/*wl*.rpm
+ls /tmp/akmods-rpms/kmods
+dnf5 install -y /tmp/akmods-rpms/kmods/*wl*.rpm
